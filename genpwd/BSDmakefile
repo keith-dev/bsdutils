@@ -1,0 +1,7 @@
+PROG_CXX = genpwd
+SRCS = main.cc
+MAN = ${PROG_CXX}.8
+
+LDFLAGS = -lcrypt
+
+.include <bsd.prog.mk>

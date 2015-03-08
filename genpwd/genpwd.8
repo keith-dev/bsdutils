@@ -1,0 +1,33 @@
+.Dd March 7, 2015
+.Dt GENPWD 8
+.Os
+.Sh NAME
+.Nm genpwd
+.Nd Generates encrypted password for pw(8), uses crypt(3)
+.Sh SYNOPSIS
+The input is a stream of cleartext puctuated by format and salt changes.
+
+.Nm
+.Op cleartext] [cleartext] [..
+.Op Fl f format
+.Op Fl s salt
+.Op cleartext] [cleartext] [..
+.Sh DESCRIPTION
+gempwd just calls
+.Fn crypt
+to generate ciphers.  Both the salt and format can be set with command
+line arguments multiple times.
+.Sh RETURN VALUES
+The cipher text is written to stdout.
+.Sh SEE ALSO
+.Xr crypt 3 ,
+.Xr pw 8 ,
+.Xr ezjail-admin 8 
+.Sh HISTORY
+Needed for account generation in an ezjail flavour.
+.Sh AUTHORS
+.An -nosplit
+Originally written by
+.An Keith Williams Aq keith.dev.uk@gmail.com ,
+.Sh BUGS
+None reported.
